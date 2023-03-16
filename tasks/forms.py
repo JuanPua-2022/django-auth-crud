@@ -9,7 +9,7 @@ class TaskForm(forms.ModelForm):
         fields = ['title','description','important']
         widgets = {
                     'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Write a Title'}), # paso la clase de bustra que desee
-                    'description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Write a descrition','row':'5'}),
+                    'description': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Write a descrition'}),
                     'important': forms.CheckboxInput(attrs={'class': 'form-check-input'})
                     }
         

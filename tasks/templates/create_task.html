@@ -10,12 +10,24 @@
 <main class="container mt-5"> 
   <div class="row">
     <div class="col-md-6 offset-md-3">  <!-- lo use para centar columnas bootstrap  -->
-      <h1 class="text-center display-3">Create Task</h1>
+      <h1 class="text-center display-3 bg-secondary text-white">Create Task</h1>
       {{ error }}
       <form action="/tasks/create/" method="POST" class="card card-body">
         {% csrf_token %}
 
-        {{ form.as_p }}
+         <!-- {{ form.as_p }} -->
+         
+
+         <p>Title {{ form.title }}</p>
+
+         
+          <p>Details </p>
+          <textarea rows="4" cols="50">
+          <p> {{ form.description }}</p>
+         </textarea>
+
+         <p> Important : {{ form.important }}</p>
+
 
         <button class="btn btn-success">
           Save

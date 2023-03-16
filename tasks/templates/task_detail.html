@@ -14,6 +14,11 @@
           <form method='POST'>
             {% csrf_token %}
             {{ form.as_p }}
+
+            <textarea rows="4" cols="50">
+              {{ task.description }}
+            </textarea>
+
             <p>Autor : <strong> {{ task.user.username }} </strong></p>
         
             <button class="btn btn-success">

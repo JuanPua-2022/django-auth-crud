@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from .forms import TaskForm
-from .models import Task
+from .models import Task, Company
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required # proteger urls 
 
@@ -13,7 +13,9 @@ from django.contrib.auth.decorators import login_required # proteger urls
 
 
 def home(request):
-    return render(request, 'home.html')
+    company = Company.objects.all() # todas las tareas
+    return render(request, 'home.html', {'company': company})
+
 
 
 def signup(request):

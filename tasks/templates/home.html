@@ -4,13 +4,11 @@
 
 <main class="container py-5"> <!-- py-5, centra vert-->
 <section class="card mb-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-  <h1 class="display-1 text-center">Django Apps</h1>
-
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, in veniam necessitatibus nesciunt aliquid quam facilis dolor vel dolorum esse architecto minus voluptatem hic perspiciatis quos reiciendis eos sequi aut?
-  Nesciunt, ullam doloribus eum laborum sapiente recusandae molestiae, velit o </p>
-
-  <p>Nulla vero facilis quia rerum aspernatur iste perspiciatis. Amet temporibus, doloribus aliquam libero ipsa ducimus sunt velit nisi quod vel quas voluptatum culpa debitis sed quos blanditiis impedit recusandae magni?
-  possimus ullam temporibus harum et deleniti quas.</p>
+  {% for comp in company %}
+    <h1 class="display-1 text-center">{{ comp.title }}</h1>
+  
+    <p>{{ comp.description }}</p>
+    {% endfor %}
 
   <div class="text-center">
     <a href="/signup/"  class="btn btn-secondary">

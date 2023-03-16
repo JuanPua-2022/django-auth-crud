@@ -4,12 +4,12 @@
 
 <main class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
-
-      <h1 class="text-center display-3 py-5">{{ title }} </h1>
-        <ul class="list-group">
+    <div class="col-md-8 offset-md-2">
+      
+      <h1 class="text-center display-3 py-4 bg-secondary text-white">{{ title }} </h1>
+        <ul class="list-group bg-light">
           {% for task in tasks %}
-            <a href="{% url 'task_detail' task.id %}" class="list-group-item">
+            <a href="{% url 'task_detail' task.id %}" class="list-group-item shadow">
 
               <header class="d-flex justify-content-between"> <!-- text misma linea a la der  -->
                 {% if task.important %}
@@ -21,8 +21,13 @@
                   <p>Autor : <strong>{{ task.user.username }} </strong></p>
                 {% endif %}
               </header>
+         
+              <textarea rows="4" cols="50">
+                {{ task.description }}
+              </textarea>
+              <br>
+
               
-              <p>{{ task.description }}</p>
               Important :
               {% if task.important %}
                 <span class="fw-bold text-success"> {{ task.important }}</span>
