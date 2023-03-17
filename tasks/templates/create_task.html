@@ -17,17 +17,14 @@
 
          <!-- {{ form.as_p }} -->
          
+        <p>Title {{ form.title }}</p>
 
-         <p>Title {{ form.title }}</p>
-
-         
-          <p>Details </p>
-          <textarea rows="4" cols="50">
-          <p> {{ form.description }}</p>
-         </textarea>
+        <p>Details</p>
+        <textarea rows="4" cols="35">
+          <p>{{ form.description }}</p>
+        </textarea>
 
          <p> Important : {{ form.important }}</p>
-
 
         <button class="btn btn-success">
           Save

@@ -34,7 +34,7 @@
           
           {% if user.is_authenticated %}
             <!-- {{ request.path }} -->
-            <li class="nav-item {% if request.path == '/tasks/' %}bg-secondary text-light{% endif %}>">     <!-- name='tasks' -->
+            <li class="nav-item {% if request.path == '/tasks/' %}bg-secondary text-light{% endif %}">     <!-- name='tasks' -->
               <a href="{% url 'tasks' %}" class="nav-link" >Tasks Pending</a>
             </li>
             <li class="nav-item {% if request.path == '/tasks_completed/' %}bg-secondary text-light {% endif %}">
@@ -48,11 +48,11 @@
               <a href="/logout" class="nav-link" >Logout</a>
             </li>
           {% else %}		
-            <li class="nav-item">
+            <li class="nav-item {% if request.path == '/signup' %}bg-secondary text-light {% endif %}">
               <!-- no existe el usuario, autenticarse o crearse -->
               <a href="/signup" class="nav-link" >Signup</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-item {% if request.path == '/signin' %}bg-secondary text-light {% endif %}">
               <!-- existe el usuario, autenticarse o iniciar seccion -->
               <a href="/signin" class="nav-link" >Sign In</a>
             </li>
