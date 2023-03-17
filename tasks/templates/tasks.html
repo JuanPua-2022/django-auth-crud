@@ -6,7 +6,7 @@
   <div class="row">
     <div class="col-md-8 offset-md-2">
       
-      <h1 class="text-center display-3 py-4 bg-secondary text-white">{{ title }} </h1>
+      <h1 class="text-center display-3 py-5 bg-secondary text-white">{{ title }} </h1>
         <ul class="list-group bg-light">
           {% for task in tasks %}
             <a href="{% url 'task_detail' task.id %}" class="list-group-item shadow">
@@ -21,14 +21,10 @@
                   <p>Autor : <strong>{{ task.user.username }} </strong></p>
                 {% endif %}
               </header>
-         
-              <textarea rows="4" cols="50">
+  
                 {{ task.description }}
-              </textarea>
-              <br>
-
-              
-              Important :
+                <br>
+                Important :
               {% if task.important %}
                 <span class="fw-bold text-success"> {{ task.important }}</span>
               {% else %}

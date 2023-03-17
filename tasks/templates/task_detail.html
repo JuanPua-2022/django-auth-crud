@@ -3,21 +3,17 @@
 {% block content %}
    <main class="container">
     <div class="row">
-      <div class="col-md-4 offset-md-4">
+      <div class="col-md-6 offset-md-3">
         <h1 class="text-center display-3 py-5">Task Detail</h1>
 
         <h2>{{ task.title }}</h2>
     
         {{ error }}
 
-        
+        <div class="bg-light">
           <form method='POST'>
             {% csrf_token %}
             {{ form.as_p }}
-
-            <textarea rows="4" cols="50">
-              {{ task.description }}
-            </textarea>
 
             <p>Autor : <strong> {{ task.user.username }} </strong></p>
         
@@ -25,7 +21,8 @@
               UpDate 
             </button>
           </form>
-          
+        </div>
+
         <div class="mt-5 d-flex">
           <form action = "{% url 'task_complete' task.id %}"  method="POST">
             {% csrf_token %}
