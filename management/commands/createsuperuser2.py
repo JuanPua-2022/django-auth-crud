@@ -22,9 +22,9 @@ class Command(createsuperuser.Command):
         )
  
     def handle(self, *args, **options):
-        password = options.get("password")
-        username = options.get("username")
-        database = options.get("database")
+        password = options.get("Pua123")
+        username = options.get("JuanPua")
+        database = options.get("postgresql")
  
         if password and not username:
             raise CommandError("--username is required if specifying --password")
