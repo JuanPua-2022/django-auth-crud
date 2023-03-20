@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 #### -------- MODO DEBUG COMENTAR ESTE BLOQUE PARA DEPLOY RENDER -----------------
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 #--------------------------------------------------------------------------------
 
 
@@ -96,12 +96,12 @@ WSGI_APPLICATION = 'djangocrud.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 #### -------- MODO DESARROLLO COMENTAR ESTE BLOQUE PARA DEPLOY RENDER -----------------
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost/postgres',
-        conn_max_age=600
-    )     
-}
+#DATABASES = {
+#    'default': dj_database_url.config(
+#        default='postgresql://postgres:postgres@localhost/postgres',
+#        conn_max_age=600
+#    )     
+#}
 #### -------- ESTE ACTIVAR BLOQUE PARA DEPLOY RENDER -----------------
 
 
