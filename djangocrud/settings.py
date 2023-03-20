@@ -149,7 +149,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
  
-MEDIA_ROOT= os.path.join(BASE_DIR, 'static/images/') # le digo la ruta donde buscar ls archivos multimedia
+MEDIA_ROOT= os.path.join(BASE_DIR, 'media/images/') # le digo la ruta donde buscar ls archivos multimedia
 
 
 if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
