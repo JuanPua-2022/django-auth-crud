@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from django.conf.urls.static import static
-from django.conf import settings
+from django.conf.urls.static import static # inporto estos files
+from django.conf import settings # para mostrar imagenes y static
 
 from tasks import views
 
@@ -36,4 +36,5 @@ urlpatterns = [
     path('signin/', views.signin, name='signin'),
 ]
 
+#add url para que leaa las imagenes y files static 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
