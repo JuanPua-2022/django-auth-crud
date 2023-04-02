@@ -143,7 +143,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/' # carpeta publica multimdia de nuestro proyecto url en el navegador
+MEDIA_URL = 'media/' # carpeta publica multimdia de nuestro proyecto url en el navegador
 MEDIA_ROOT= os.path.join(BASE_DIR, 'media') # le digo la ruta donde buscar ls archivos multimedia
 
 
